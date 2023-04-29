@@ -1,0 +1,24 @@
+.videos .footage:first-child {
+  grid-column: span 3 / span 3;
+}
+.footage {
+  position: relative;
+}
+/* .footage::after {
+  position: absolute;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  content: "▸";
+  font-size: 72px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.639);
+  height: 100%;
+  width: 100%;
+  top: 0;
+} */
+/* .videos > .footage ~ .footage {
+  grid-column: span 1 / span 1;
+} */
