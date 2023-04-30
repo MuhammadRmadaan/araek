@@ -1,5 +1,6 @@
 import { useState,useRef,useEffect } from "react";
 import Main from "./main";
+import "./home.css";
 import slide1 from "../../assets/images/slides/slide1.jpg"
 import slide2 from "../../assets/images/slides/slide2.jpg"
 import slide3 from "../../assets/images/slides/slide3.jpg"

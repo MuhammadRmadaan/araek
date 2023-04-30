@@ -6,10 +6,14 @@ import Gallery from './components/home/gallery';
 import Videos from './components/home/videos';
 import Facilities from './components/home/facilities';
 import Location from './components/home/location';
+import PageUpButton from './components/home/pageUpBtn';
+import Contact from './components/home/contact';
+import Footer from './components/footer/footer';
 
 function App() {
   return (
-    <div className="App" dir='rtl'>
+    <div className="App scroll-smooth" dir='rtl'>
+        <PageUpButton/>
         <Navbar/>
         <Home/>
         <Services/>
@@ -17,6 +21,8 @@ function App() {
         <Videos/>
         <Facilities/>
         <Location/>
+        <Contact/>
+        <Footer/>
     </div>
   );
 }

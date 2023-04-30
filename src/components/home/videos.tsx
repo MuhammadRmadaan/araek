@@ -60,6 +60,7 @@ const Videos = () => {
     
   return ( 
     <section
+    id="videos"
     className="container mx-auto px-3 sm:px-0 py-12 text-start sm:py-20"
     >
       <div className="text-start text-main-gold-dark mb-6 md:mb-12 lg:mb-20">
