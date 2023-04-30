@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/araek/static/css/main.7cc905b6.css",
-    "main.js": "/araek/static/js/main.703416c8.js",
+    "main.css": "/araek/static/css/main.df3f457c.css",
+    "main.js": "/araek/static/js/main.df62b487.js",
     "static/media/footage1.mp4": "/araek/static/media/footage1.c6a962d22652dfb75ca4.mp4",
     "static/media/slide6.jpg": "/araek/static/media/slide6.2467dc2e011aca38686c.jpg",
     "static/media/slide4.jpg": "/araek/static/media/slide4.c3a45866d23e7ac1a278.jpg",
@@ -12,11 +12,11 @@
     "static/media/slide5.jpg": "/araek/static/media/slide5.df56d6ff749919e4551a.jpg",
     "static/media/logo.png": "/araek/static/media/logo.13b2bea4d0422f693cb0.png",
     "index.html": "/araek/index.html",
-    "main.7cc905b6.css.map": "/araek/static/css/main.7cc905b6.css.map",
-    "main.703416c8.js.map": "/araek/static/js/main.703416c8.js.map"
+    "main.df3f457c.css.map": "/araek/static/css/main.df3f457c.css.map",
+    "main.df62b487.js.map": "/araek/static/js/main.df62b487.js.map"
   },
   "entrypoints": [
-    "static/css/main.7cc905b6.css",
-    "static/js/main.703416c8.js"
+    "static/css/main.df3f457c.css",
+    "static/js/main.df62b487.js"
   ]
 }
