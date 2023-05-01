@@ -8,11 +8,14 @@ import slide4 from "../../assets/images/slides/slide4.jpg"
 import slide5 from "../../assets/images/slides/slide5.jpg"
 import slide6 from "../../assets/images/slides/slide6.jpg"
 import slide7 from "../../assets/images/slides/slide7.jpg"
-
-const Home = () => {
+import SideMenu from "./sideMenu";
+interface Props{
+  menuBtn:any
+}
+const Home = ({menuBtn}:Props) => {
   interface slide {
     url:string,
-    title:string,
+    title?:string,
   }
   const slides:slide[] = [
     {url:slide1,title:"slide1"},
@@ -26,6 +29,7 @@ const Home = () => {
   let [currentIndex,setCurrentIndex]=useState(0)
   
   let dotsArray:any[]=[]
+  let menu:any
   const nextSlide = ()=>{
     const isLastSlide = currentIndex === slides.length - 1;
     const newIndex = isLastSlide ? 0 : currentIndex + 1;
@@ -35,6 +39,17 @@ const Home = () => {
   const changeColor = (index:number)=> void dotsArray.map((dot:any)=>dotsArray.indexOf(dot)===index?dot.className="text-main-gold":dot.className="")
   const getDots = (dots:any)=> {
     dotsArray =  Array.from(dots)
+  }
+  const getMenu = (men:any)=>{
+    menu = men
+      if(menuBtn!==null){
+        menuBtn.addEventListener('click',()=>{
+          let clicked:boolean=false
+          // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+          clicked===false?(menu.classList.remove("hidden"),clicked=true):(menu.classList.add("hidden"),clicked=false)
+          console.log("###############")
+        })
+      }
   }
     const goToSlide=(index:any)=>{
     setCurrentIndex(index)
@@ -52,11 +67,17 @@ const Home = () => {
   return ( 
     <main
       id="home"
-      className="h-screen w-full sm:mb-0 flex flex-col"
+      className="h-screen w-full flex flex-col"
     >
-      <div className="h-full w-full top-0 left-0 absolute bg-black/60 z-20"></div>
+      {/* <Navbar getMenuBtn={getMenuBtn}/> */}
+      <div id="menu-container" className="sm:hidden absolute top-0 left-0 w-full h-full">
+        <SideMenu getMenu={getMenu}/>
+      </div>
+      <div className=" h-[80%] sm:h-full w-full top-0 left-0 absolute bg-black/60 z-20">
+        
+      </div>
       <Main slides={slides} goToSlide={goToSlide} getDots={getDots} />
-      <div id="slider" className="bg-cover bg-center h-full w-full transition-all z-10"
+      <div id="slider" className="bg-cover bg-center h-[80%] sm:h-full w-full transition-all z-10"
         style={{backgroundImage:`url('${slides[currentIndex].url}')`}}>
       </div>
     </main>

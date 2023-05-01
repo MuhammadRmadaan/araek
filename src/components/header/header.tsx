@@ -1,15 +1,22 @@
+import {Link}from "react-router-dom"
 import logo from "../../assets/images/logo.png"
 import "./header.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { /*faAward,*/faMedal } from "@fortawesome/free-solid-svg-icons";
 import Menu from "../home/menu";
 //<img src={logo} alt="Araaek logo" className="w-28" />
-const Navbar = () => {
+interface Props {
+  getMenuBtn:(menuB:any)=>any
+}
+const Navbar = ({getMenuBtn}:Props) => {
+  setTimeout(()=>{
+    getMenuBtn(document.querySelector("[data-menu-btn]"))
+  },10)
   return ( 
-    <div id="navCon" className="w-full absolute left-1/2 -translate-x-1/2 top-0 z-40">
+    <div id="navCon" className="w-full absolute left-1/2 -translate-x-1/2 top-0 z-[70]">
       <nav
         id="nav"
-        className="px-3 sm:px-0 container w-screen mx-auto flex justify-between items-center top-0 py-4"
+        className="px-3 sm:px-12 container w-screen mx-auto flex justify-between items-center top-0 py-4"
       >
           <div className="sm:hidden w-20 md:w-32"></div>
           <img
@@ -20,7 +27,7 @@ const Navbar = () => {
           />
           <ul className="relative">
             <li className="hidden sm:flex gap-3 md:gap-10 text-white child-hover:text-main-color-light child:transition-all">
-              <a href="#home">الرئيسية</a>
+              <Link to="/">الرئيسية</Link>
               <div className="services-container">
                 <a id="z" href="#services" className="services">خدماتنا  <span id="services-menu-arrow" className="services-menu-arrow inline-block p-0.5 border-2 border-white border-solid border-t-transparent border-r-transparent -rotate-45 mb-0.5 mr-0.5 transition-all"></span></a>
                 <Menu/>

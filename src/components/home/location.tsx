@@ -4,7 +4,7 @@ const Lcation = () => {
     id="location"
     className="px-3 sm:px-0 py-12 text-start sm:py-20"
     >
-      <div className="container mx-auto text-start text-main-gold-dark mb-6 md:mb-12 lg:mb-20">
+      <div className="container sm:px-12 mx-auto text-start text-main-gold-dark mb-6 md:mb-12 lg:mb-20">
         <h2 className="text-2xl font-semibold sm:text-3xl md:text-4xl lg:text-">كيفية الوصول إلينا؟</h2>
         <p className="sm:text-lg md:text-xl">موقعنا الجغرافـي على خرائط جوجل</p>
       </div>

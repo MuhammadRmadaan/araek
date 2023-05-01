@@ -1,28 +1,33 @@
 import './assets/styles/App.css';
-import Navbar from './components/header/header';
-import Home from './components/home/home';
-import Services from './components/home/services';
-import Gallery from './components/home/gallery';
-import Videos from './components/home/videos';
-import Facilities from './components/home/facilities';
-import Location from './components/home/location';
+import {useState,useEffect} from 'react'
+import {Route,Routes} from "react-router-dom"
 import PageUpButton from './components/home/pageUpBtn';
-import Contact from './components/home/contact';
 import Footer from './components/footer/footer';
+import MainPage from './pages/MainPage';
+import Chalets from './pages/chalets';
+import HotelRooms from './pages/rooms';
+import Villas from './pages/villas';
+import Navbar from './components/header/header';
+import Contact from './components/home/contact';
 
 function App() {
+  let [menuBtn,setMenuBtn]=useState<HTMLElement | null>(null)
+  const getMenuBtn = (menuB:any)=> {
+    setMenuBtn(menuB)
+    console.log(menuBtn)
+  }
   return (
     <div className="App scroll-smooth" dir='rtl'>
-        <PageUpButton/>
-        <Navbar/>
-        <Home/>
-        <Services/>
-        <Gallery/>
-        <Videos/>
-        <Facilities/>
-        <Location/>
-        <Contact/>
-        <Footer/>
+      <Navbar getMenuBtn={getMenuBtn}/>
+      <PageUpButton/>
+      <Routes>
+        <Route path='/' element={<MainPage menuBtn={menuBtn}/>} />
+        <Route path='/chalets' element={<Chalets/>} />
+        <Route path='/hotelrooms' element={<HotelRooms/>} />
+        <Route path='/villas' element={<Villas/>} />
+      </Routes>
+      <Contact/>
+      <Footer/>
     </div>
   );
 }

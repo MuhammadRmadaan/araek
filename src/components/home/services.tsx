@@ -5,7 +5,7 @@ const Services = () => {
   return ( 
   <section
     id="services"
-    className="container mx-auto px-3 sm:px-0 py-12 sm:py-20 text-start"
+    className="container sm:px-12 mx-auto px-3 py-0 pyy-12 sm:py-20 text-start -translate-y-36 sm:-translate-y-0"
   >
     <div className="text-start text-main-gold-dark mb-6 md:mb-12 lg:mb-20">
       <h2 className="text-2xl font-semibold sm:text-3xl md:text-4xl lg:text-">خدماتُنـــا</h2>
