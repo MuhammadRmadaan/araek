@@ -9,10 +9,7 @@ import slide5 from "../../assets/images/slides/slide5.jpg"
 import slide6 from "../../assets/images/slides/slide6.jpg"
 import slide7 from "../../assets/images/slides/slide7.jpg"
 import SideMenu from "./sideMenu";
-interface Props{
-  menuBtn:any
-}
-const Home = ({menuBtn}:Props) => {
+const Home = (/*{menuBtn}:Props*/) => {
   interface slide {
     url:string,
     title?:string,
@@ -42,16 +39,8 @@ const Home = ({menuBtn}:Props) => {
   }
   const getMenu = (men:any)=>{
     menu = men
-      if(menuBtn!==null){
-        menuBtn.addEventListener('click',()=>{
-          let clicked:boolean=false
-          // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-          clicked===false?(menu.classList.remove("hidden"),clicked=true):(menu.classList.add("hidden"),clicked=false)
-          console.log("###############")
-        })
-      }
   }
-    const goToSlide=(index:any)=>{
+  const goToSlide=(index:any)=>{
     setCurrentIndex(index)
     changeColor(index)
   }
@@ -69,7 +58,6 @@ const Home = ({menuBtn}:Props) => {
       id="home"
       className="h-screen w-full flex flex-col"
     >
-      {/* <Navbar getMenuBtn={getMenuBtn}/> */}
       <div id="menu-container" className="sm:hidden absolute top-0 left-0 w-full h-full">
         <SideMenu getMenu={getMenu}/>
       </div>

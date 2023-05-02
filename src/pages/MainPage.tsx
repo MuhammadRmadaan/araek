@@ -5,18 +5,11 @@ import Videos from '../components/home/videos';
 import Facilities from '../components/home/facilities';
 import Location from '../components/home/location';
 import PageUpButton from '../components/home/pageUpBtn';
-interface Props{
-  menuBtn:any
-}
-const MainPage = ({menuBtn}:Props) => {
-  // setTimeout(()=>{
-  //   console.log(menuBtn)
-  // },10)
-
+const MainPage = () => {
   return (
     <>
-    <PageUpButton/>
-      <Home menuBtn={menuBtn}/>
+      <PageUpButton/>
+      <Home/>
       <Services/>
       <Gallery/>
       <Videos/>

@@ -12,27 +12,27 @@ const Services = () => {
       <p className="sm:text-lg md:text-xl">يقدم منتجعنا السياحي خدمات متنوعة تلبي احتياجات <br /> زواره الكرام، حيث تشمل هذه الخدمات</p>
     </div>
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-[repeat(3,minmax(0,350px))] gap-y-12 sm:gap-3 md:gap-6 lg:gap-12 justify-center child:cursor-pointer child-hover:scale-105 child-hover:shadow-md px-2 sm:px-0">
-      <div className="rounded-3xl bg-main-gold transition duration-300">
+      <a className="rounded-3xl bg-main-gold transition duration-300" href="/chalets">
         <img src={service1} alt="service1" className=" w-full object-fill rounded-t-3xl" loading="lazy" />
         <div className="p-4 text-white">
           <h3 className="font-semibold text-3xl mb-2">شاليهات</h3>
           <p className="text-xl">تمتع بالراحة والاسترخاء في شاليهات أرائك المجهزة بأحدث التقنيات والأجهزة الكهربائية، والأثاث المريح.</p>
         </div>
-      </div>
-      <div className="rounded-3xl bg-main-gold transition duration-300 sm:scale-110 sm:hover:!scale-[1.15]">
+      </a>
+      <a className="rounded-3xl bg-main-gold transition duration-300 sm:scale-110 sm:hover:!scale-[1.15]" href="/villas">
         <img src={service2} alt="service1" className=" w-full object-fill rounded-t-3xl" loading="lazy" />
         <div className="p-4 text-white">
           <h3 className="font-semibold text-3xl mb-2">فـلل</h3>
           <p className="text-xl">تتميز فيلاتنا بمساحات واسعة وتصميم داخلي رائع، وتتضمن جميع المرافق الحديثة التي تلبي جميع احتياجات الزائرين.</p>
         </div>
-      </div>
-      <div className="rounded-3xl bg-main-gold transition duration-300">
+      </a>
+      <a className="rounded-3xl bg-main-gold transition duration-300" href="/hotelrooms">
         <img src={service3} alt="service1" className=" w-full object-fill rounded-t-3xl" loading="lazy" />
         <div className="p-4 text-white">
           <h3 className="font-semibold text-3xl mb-2">غـرف فندقـيـة</h3>
           <p className="text-xl">تتوفر فيها جميع الخدمات الفندقية الراقية. تحتوي على غرف نوم فسيحة ومطابخ صغيرة وأماكن جلوس مريحة.</p>
         </div>
-      </div>
+      </a>
     </div>
   </section> 
   );

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Menu from "./menu";
 interface Props {
   getMenu:(menu:any)=>any
@@ -16,7 +17,7 @@ const SideMenu = ({getMenu}:Props) => {
       <div className="flex flex-col h-full justify-between pb-12 pt-44">
         <ul className="relative">
         <li className="flex flex-col gap-8 md:gap-10 text-white child-hover:text-main-color-light child:transition-all">
-          <a className=" menu-opt text-xl" href="#home">الرئيسية</a>
+          <Link to="/" className=" menu-opt text-xl">الرئيسية</Link>
           <div className="services-container">
             <a href="#services" className="services menu-opt text-xl">خدماتنا  <span id="services-menu-arrow" className="services-menu-arrow inline-block p-0.5 border-2 border-white border-solid border-t-transparent border-r-transparent -rotate-45 mb-0.5 mr-0.5 transition-all"></span></a>
             <Menu/>

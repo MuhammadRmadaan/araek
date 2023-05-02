@@ -1,5 +1,5 @@
 import './assets/styles/App.css';
-import {useState,useEffect} from 'react'
+import {useState} from 'react'
 import {Route,Routes} from "react-router-dom"
 import PageUpButton from './components/home/pageUpBtn';
 import Footer from './components/footer/footer';
@@ -9,19 +9,20 @@ import HotelRooms from './pages/rooms';
 import Villas from './pages/villas';
 import Navbar from './components/header/header';
 import Contact from './components/home/contact';
+import SideMenu from './components/home/sideMenu';
 
 function App() {
-  let [menuBtn,setMenuBtn]=useState<HTMLElement | null>(null)
-  const getMenuBtn = (menuB:any)=> {
-    setMenuBtn(menuB)
-    console.log(menuBtn)
+  let [sideMenu,setSideMenu]=useState<null|HTMLElement>(null)
+  const getMenu = (menuB:any)=> {
+    setSideMenu(menuB)
+    console.log(sideMenu,"kkk")
   }
   return (
     <div className="App scroll-smooth" dir='rtl'>
-      <Navbar getMenuBtn={getMenuBtn}/>
-      <PageUpButton/>
+      <Navbar sideMenu={sideMenu}/>
+      <SideMenu getMenu={getMenu}/>
       <Routes>
-        <Route path='/' element={<MainPage menuBtn={menuBtn}/>} />
+        <Route path='/' element={<MainPage /*menuBtn={menuBtn}*//>} />
         <Route path='/chalets' element={<Chalets/>} />
         <Route path='/hotelrooms' element={<HotelRooms/>} />
         <Route path='/villas' element={<Villas/>} />

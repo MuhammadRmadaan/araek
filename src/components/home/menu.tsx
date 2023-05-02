@@ -6,7 +6,7 @@ const Menu = () => {
         <div  id="services-menu" className="services-menu flex w-44 items-start flex-col gap-5 bg-main-gold/60 rounded-md font-semibold text-main-g transition-all child:text-white child:transition-all child-hover:pr-2">
           <Link to="/chalets">شاليهات</Link>
           <Link to="/villas">فــلل</Link>
-          <Link to="/hotelrooms">فندقية</Link>
+          <Link to="/hotelrooms">غرف فندقية</Link>
         </div>
       </div>
     </div>

@@ -4,14 +4,10 @@ import "./header.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { /*faAward,*/faMedal } from "@fortawesome/free-solid-svg-icons";
 import Menu from "../home/menu";
-//<img src={logo} alt="Araaek logo" className="w-28" />
 interface Props {
-  getMenuBtn:(menuB:any)=>any
+  sideMenu:any|HTMLElement
 }
-const Navbar = ({getMenuBtn}:Props) => {
-  setTimeout(()=>{
-    getMenuBtn(document.querySelector("[data-menu-btn]"))
-  },10)
+const Navbar = ({sideMenu}:Props) => {
   return ( 
     <div id="navCon" className="w-full absolute left-1/2 -translate-x-1/2 top-0 z-[70]">
       <nav
@@ -42,6 +38,7 @@ const Navbar = ({getMenuBtn}:Props) => {
         <div
           className="sm:hidden flex flex-col justify-between gap-1 child:bg-main-gold child:w-8 child:h-1 child:rounded-full"
           data-menu-btn
+          onClick={()=>{sideMenu.classList.toggle("hidden")}}
         >
           <span></span>
           <span></span>
