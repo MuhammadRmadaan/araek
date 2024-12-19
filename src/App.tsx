@@ -1,7 +1,6 @@
 import './assets/styles/App.css';
 import {useState} from 'react'
 import {Route,Routes} from "react-router-dom"
-import PageUpButton from './components/home/pageUpBtn';
 import Footer from './components/footer/footer';
 import MainPage from './pages/MainPage';
 import Chalets from './pages/chalets';
