@@ -26,7 +26,6 @@ const Home = (/*{menuBtn}:Props*/) => {
   let [currentIndex,setCurrentIndex]=useState(0)
   
   let dotsArray:any[]=[]
-  let menu:any
   const nextSlide = ()=>{
     const isLastSlide = currentIndex === slides.length - 1;
     const newIndex = isLastSlide ? 0 : currentIndex + 1;
