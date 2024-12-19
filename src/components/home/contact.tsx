@@ -1,7 +1,7 @@
 import "./home.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot,faPhone,faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { faFacebook,faTwitter,faInstagram,faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import { faFacebook,faTwitter,faInstagram } from "@fortawesome/free-brands-svg-icons";
 const Contact = () => {
   return ( 
     <section id="contact" className=" bg-main-gold-dark">
